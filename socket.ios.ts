@@ -35,13 +35,13 @@ export function disableDebug(): void {
 
 export class Socket {
 
-    private ios: SocketIOClient;
+    private ios: SocketIOClientSwift;
 
     private _listenerMap = new Map();
 
     constructor(uri: string, options: Object = {}) {
 
-        this.ios = SocketIOClient.alloc();
+        this.ios = SocketIOClientSwift.alloc();
 
         this.ios.initWithSocketURLOptions(NSURL.URLWithString(uri), options);
 
